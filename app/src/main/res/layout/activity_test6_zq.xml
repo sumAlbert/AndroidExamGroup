@@ -3,17 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/test6_ZQ_DrawerLayout">
-    <FrameLayout
-        android:id="@+id/test6_ZQ_FrameLayout"
+    <!--<FrameLayout-->
+        <!--android:id="@+id/test6_ZQ_FrameLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/white"/>-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/test6_ZQ_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
     <ListView
-        android:id="@+id/left_drawer"
+        android:id="@+id/test6_ZQ_ListView"
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp"
-        android:background="#111"/>
+        android:background="@color/white"/>
 </android.support.v4.widget.DrawerLayout>
