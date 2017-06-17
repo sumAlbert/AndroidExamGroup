@@ -15,11 +15,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
 import adapt.Test6_ZQ_Adapt;
 import collector.BaseActivity;
+import db.DBHandler_ZQ;
 import db.DbHelp_ZQ;
 import hash.HashName;
 
@@ -29,6 +31,7 @@ import hash.HashName;
 
 public class Test7_ZQ_Activity extends BaseActivity implements View.OnClickListener{
     private DbHelp_ZQ dbHelp_zq;
+    private DBHandler_ZQ dbHandler_zq;
     private LinearLayout test7_ZQ_LL_1;
     private LinearLayout test7_ZQ_LL_2;
     private LinearLayout test7_ZQ_LL_3;
@@ -52,6 +55,7 @@ public class Test7_ZQ_Activity extends BaseActivity implements View.OnClickListe
         test7_ZQ_LL_3.setOnClickListener(this);
         test7_ZQ_LL_4.setOnClickListener(this);
         dbHelp_zq=new DbHelp_ZQ(this,"Name.db",null,1);
+        dbHandler_zq=new DBHandler_ZQ(new WeakReference<BaseActivity>(this));
     }
     public static void actionStart(Context context){
         Intent intent=new Intent(context,Test7_ZQ_Activity.class);
@@ -65,9 +69,11 @@ public class Test7_ZQ_Activity extends BaseActivity implements View.OnClickListe
                 dbHelp_zq.getWritableDatabase();
                 break;
             case R.id.test7_ZQ_LL_2:
-                insertDb();
+                dbHandler_zq.sendEmptyMessageDelayed(DBHandler_ZQ.DOING,1000);
                 break;
             case R.id.test7_ZQ_LL_3:
+                dbHandler_zq.sendEmptyMessage(DBHandler_ZQ.OVER);
+                Toast.makeText(Test7_ZQ_Activity.this,"over",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.test7_ZQ_LL_4:
                 displayDb();
@@ -93,5 +99,8 @@ public class Test7_ZQ_Activity extends BaseActivity implements View.OnClickListe
             }while(cursor.moveToNext());
         }
         cursor.close();
+    }
+    public DBHandler_ZQ getHandler(){
+        return this.dbHandler_zq;
     }
 }
