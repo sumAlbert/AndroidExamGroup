@@ -92,11 +92,7 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
         mLocationOption.setNeedAddress(true);
         mLocationClient.setLocationOption(mLocationOption);
 //        AMapLocationListener locationListener = null;
-
-//        @Override
-
-
-        init();
+       init();
     }
 
     /**
