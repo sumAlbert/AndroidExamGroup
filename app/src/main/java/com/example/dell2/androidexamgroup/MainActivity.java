@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         test7.setOnClickListener(this);
         test8.setOnClickListener(this);
         test3_ZQ.setOnClickListener(this);
-        test5_ZQ.setOnClickListener(this);
+        test5_ZQ.setOnClickListener(this);//
     }
 
     public void onClick(View view){
