@@ -32,6 +32,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -43,6 +44,7 @@
             android:name="com.amap.api.v2.apikey"
             android:value="68aa2e558afefe286636958b2090b2e7">//开发者的key。华：68aa2e558afefe286636958b2090b2e7
         </meta-data>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,11 +52,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Test3_ZQ_Activity" />
+        <activity android:name=".Test5_ZQ_Activity" />
         <activity android:name=".Test6_ZQ_Activity" />
         <activity android:name=".Test7_ZQ_Activity" />
         <activity android:name=".Test8_ZQ_Activity" />
         <activity android:name=".Test4_Hlp_Activity" />
         <service android:name="com.amap.api.location.APSService"></service>
+        <receiver android:name="broadcast.Test5_ZQ_BroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.broadcast.Test5_zq"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

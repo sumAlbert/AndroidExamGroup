@@ -17,6 +17,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private LinearLayout test6;
     private LinearLayout test7;
     private LinearLayout test8;
+    private LinearLayout test3_ZQ;
+    private LinearLayout test5_ZQ;
 
 
     @Override
@@ -37,6 +39,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         test6=(LinearLayout)findViewById(R.id.test6);
         test7=(LinearLayout)findViewById(R.id.test7);
         test8=(LinearLayout)findViewById(R.id.test8);
+        test3_ZQ=(LinearLayout)findViewById(R.id.test3_ZQ);
+        test5_ZQ=(LinearLayout)findViewById(R.id.test5_ZQ);
         test1.setOnClickListener(this);
         test2.setOnClickListener(this);
         test3.setOnClickListener(this);
@@ -45,6 +49,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         test6.setOnClickListener(this);
         test7.setOnClickListener(this);
         test8.setOnClickListener(this);
+        test3_ZQ.setOnClickListener(this);
+        test5_ZQ.setOnClickListener(this);
     }
 
     public void onClick(View view){
@@ -73,6 +79,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 break;
             case R.id.test8:
                 Test8_ZQ_Activity.actionStart(MainActivity.this);
+                break;
+            case R.id.test3_ZQ:
+                Test3_ZQ_Activity.actionStart(MainActivity.this);
+                break;
+            case R.id.test5_ZQ:
+                Test5_ZQ_Activity.actionStart(MainActivity.this);
                 break;
             default:
                 break;
