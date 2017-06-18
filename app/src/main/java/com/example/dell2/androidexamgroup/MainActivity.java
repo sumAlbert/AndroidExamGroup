@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         test7.setOnClickListener(this);
         test8.setOnClickListener(this);
         test3_ZQ.setOnClickListener(this);
-        test5_ZQ.setOnClickListener(this);
+        test5_ZQ.setOnClickListener(this);//
     }
 
     public void onClick(View view){
@@ -65,7 +65,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 Toast.makeText(MainActivity.this,"test3",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.test4:
-                Toast.makeText(MainActivity.this,"test4",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,"test4",Toast.LENGTH_SHORT).show();
+                Test4_Hlp_Activity.actionStart(MainActivity.this);
                 break;
             case R.id.test5:
                 Toast.makeText(MainActivity.this,"test5",Toast.LENGTH_SHORT).show();
