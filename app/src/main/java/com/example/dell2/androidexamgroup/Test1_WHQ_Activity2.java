@@ -16,7 +16,7 @@ public class Test1_WHQ_Activity2 extends AppCompatActivity {
         String sex=intent.getStringExtra("sex");
         String hobby=intent.getStringExtra("hobby");
         String blood=intent.getStringExtra("blood");
-        Log.d("SecondActivity","name:"+name);
+        Log.d("SecondActivity","name:"+name);//log
         Log.d("SecondActivity","sex:"+sex);
         Log.d("SecondActivity","hobby:"+hobby);
         Log.d("SecondActivity","blood:"+blood);

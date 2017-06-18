@@ -15,7 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 public class Test1_WHQ_Activity extends AppCompatActivity {
-    private static final String[] blood={"A型","B型","O型","AB型","其他"};
+    private static final String[] blood={"A型","B型","O型","AB型","其他血型"};
     String bloodString=null;
 
     @Override

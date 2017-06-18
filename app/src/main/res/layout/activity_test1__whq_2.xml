@@ -12,6 +12,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Information succeeds by Log!"/>
+        android:text="The information succeeds by Log!"/>
 
 </RelativeLayout>
