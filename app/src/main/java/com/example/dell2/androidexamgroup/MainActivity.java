@@ -18,7 +18,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private LinearLayout test7;
     private LinearLayout test8;
     private LinearLayout test3_ZQ;
-    private LinearLayout test4_ZQ;
     private LinearLayout test5_ZQ;
 
 
@@ -41,7 +40,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         test7=(LinearLayout)findViewById(R.id.test7);
         test8=(LinearLayout)findViewById(R.id.test8);
         test3_ZQ=(LinearLayout)findViewById(R.id.test3_ZQ);
-        test4_ZQ=(LinearLayout)findViewById(R.id.test4_ZQ);
         test5_ZQ=(LinearLayout)findViewById(R.id.test5_ZQ);
         test1.setOnClickListener(this);
         test2.setOnClickListener(this);
@@ -52,14 +50,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         test7.setOnClickListener(this);
         test8.setOnClickListener(this);
         test3_ZQ.setOnClickListener(this);
-        test4_ZQ.setOnClickListener(this);
-        test5_ZQ.setOnClickListener(this);
+        test5_ZQ.setOnClickListener(this);//
     }
 
     public void onClick(View view){
         switch (view.getId()){
             case R.id.test1:
-                Toast.makeText(MainActivity.this,"test1",Toast.LENGTH_SHORT).show();
+                Test1_WHQ_Activity.actionStart(MainActivity.this);//
                 break;
             case R.id.test2:
                 Toast.makeText(MainActivity.this,"test2",Toast.LENGTH_SHORT).show();
@@ -68,7 +65,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 Toast.makeText(MainActivity.this,"test3",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.test4:
-                Toast.makeText(MainActivity.this,"test4",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,"test4",Toast.LENGTH_SHORT).show();
+                Test4_Hlp_Activity.actionStart(MainActivity.this);
                 break;
             case R.id.test5:
                 Toast.makeText(MainActivity.this,"test5",Toast.LENGTH_SHORT).show();
@@ -84,9 +82,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 break;
             case R.id.test3_ZQ:
                 Test3_ZQ_Activity.actionStart(MainActivity.this);
-                break;
-            case R.id.test4_ZQ:
-                Test4_ZQ_Activity.actionStart(MainActivity.this);
                 break;
             case R.id.test5_ZQ:
                 Test5_ZQ_Activity.actionStart(MainActivity.this);
