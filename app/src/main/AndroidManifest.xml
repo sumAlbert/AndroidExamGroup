@@ -31,7 +31,9 @@
         </receiver>
 
         <activity android:name=".Test1_WHQ_Activity" />
-        <activity android:name=".Test1_WHQ_Activity2"></activity>
+        <activity android:name=".Test1_WHQ_Activity2">
+
+        </activity>
     </application>
 
 </manifest>
