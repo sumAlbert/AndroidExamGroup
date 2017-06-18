@@ -56,7 +56,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     public void onClick(View view){
         switch (view.getId()){
             case R.id.test1:
-                Toast.makeText(MainActivity.this,"test1",Toast.LENGTH_SHORT).show();
+                Test1_WHQ_Activity.actionStart(MainActivity.this);//
                 break;
             case R.id.test2:
                 Toast.makeText(MainActivity.this,"test2",Toast.LENGTH_SHORT).show();
