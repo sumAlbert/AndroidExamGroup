@@ -11,6 +11,7 @@
     <dimen name="carousel_image">120dp</dimen>/*轮播图image*/
     <dimen name="carousel_head1">18sp</dimen>/*轮播图主标题*/
     <dimen name="carousel_head2">10sp</dimen>/*轮播图副标题*/
+    
     /*行*/
     <dimen name="line_standard_input">50dp</dimen>
     <dimen name="line_standard_item">50dp</dimen>
