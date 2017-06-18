@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Test3_ZQ_Activity" />
+        <activity android:name=".Test5_ZQ_Activity" />
         <activity android:name=".Test6_ZQ_Activity" />
         <activity android:name=".Test7_ZQ_Activity" />
         <activity android:name=".Test8_ZQ_Activity" />
