@@ -90,7 +90,7 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
         mLocationOption.setInterval(10 * 1000);
         // 地址信息
         mLocationOption.setNeedAddress(true);
-        mLocationClient.setLocationOption(mLocationOption);
+        mLocationClient.setLocationOption(mLocationOption);//
        init();
     }
 
