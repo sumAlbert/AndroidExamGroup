@@ -23,6 +23,11 @@
         <activity android:name=".Test6_ZQ_Activity" />
         <activity android:name=".Test7_ZQ_Activity" />
         <activity android:name=".Test8_ZQ_Activity" />
+        <receiver android:name="broadcast.Test5_ZQ_BroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.broadcast.Test5_zq"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
