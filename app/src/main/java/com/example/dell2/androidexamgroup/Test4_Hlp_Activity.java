@@ -85,7 +85,7 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
         mLocationOption = new AMapLocationClientOption();
         // 使用连续
         mLocationOption.setOnceLocation(false);
-        mLocationOption.setLocationCacheEnable(false);
+        mLocationOption.setLocationCacheEnable(false);//
         // 每10秒定位一次
         mLocationOption.setInterval(10 * 1000);
         // 地址信息
