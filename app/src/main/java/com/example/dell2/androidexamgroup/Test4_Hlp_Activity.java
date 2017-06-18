@@ -347,7 +347,7 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
     }
 
     public static void actionStart(Context context) {
-        Intent intent=new Intent(context,Test4_Hlp_Activity.class);
+        Intent intent=new Intent(context,Test4_Hlp_Activity.class);//
         context.startActivity(intent);
     }
 }
