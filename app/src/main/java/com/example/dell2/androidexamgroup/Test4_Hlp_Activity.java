@@ -67,7 +67,7 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
     private AMapLocationClient mLocationClient;
     private AMapLocationClientOption mLocationOption;
 
-    GeocodeSearch search;
+
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -91,7 +91,6 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
         // 地址信息
         mLocationOption.setNeedAddress(true);
         mLocationClient.setLocationOption(mLocationOption);
-//        AMapLocationListener locationListener = null;
        init();
     }
 
@@ -144,7 +143,6 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
         back_button = (ImageView) findViewById(R.id.back_button);
         search_button = (ImageView) findViewById(R.id.search_button);
         location = (EditText) findViewById(R.id.location);
-//        app = (E_Trans_Application) getApplication();
         back_button.setOnClickListener(this);
         search_button.setOnClickListener(this);
 
@@ -153,17 +151,12 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
                 if (amapLocation != null) {
                     if (amapLocation.getErrorCode() == 0) {
                         //定位成功回调信息，设置相关消息
-                        amapLocation.getLocationType();//获取当前定位结果来源，如网络定位结果，详见定位类型表
                         amapLocation.getLatitude();//获取纬度
                         amapLocation.getLongitude();//获取经度
-                        amapLocation.getAccuracy();//获取精度信息
                         amapLocation.getAddress();
 
                         etResult.setText("当前位置经度:" + amapLocation.getLongitude() + "、纬度:"
                                 + amapLocation.getLatitude() + "的地址为：\n" + amapLocation.getAddress());
-//                    SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//                    Date date = new Date(amapLocation.getTime());
-//                    df.format(date);//定位时间
                     } else {
                         //显示错误信息ErrCode是错误码，errInfo是错误信息，详见错误码表。
                         Log.e("AmapError", "location Error, ErrCode:"
@@ -191,9 +184,7 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
         // 定位点依照设备方向旋转，并且会跟随设备移动。（1秒1次定位）如果不设置myLocationType，默认也会执行此种模式。
         aMap.getUiSettings().setMyLocationButtonEnabled(true);// 设置默认定位按钮是否显示
         aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
-
-
-        myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE_NO_CENTER);//连续定位、蓝点不会移动到地图中心点，定位点依照设备方向旋转，并且蓝点会跟随设备移动。
+       myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE_NO_CENTER);//连续定位、蓝点不会移动到地图中心点，定位点依照设备方向旋转，并且蓝点会跟随设备移动。
         aMap.setMyLocationStyle(myLocationStyle);//设置定位蓝点的Style
 
         ImageView searButton = (ImageView) findViewById(R.id.search_button);//
@@ -239,37 +230,7 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
         poiSearch.searchPOIAsyn();
 
     }
-    /**
-     * （待填）
-     * 将用户的地址放进数据库里面
-     *
-     * @param location 用户地址
-     */
 
-    public boolean setUserLocation(String location) {
-        String address = keyWord.trim();
-        GeocodeQuery mquery = new GeocodeQuery(address, "");
-        // 根据地理名称执行异步解析
-        search.getFromLocationNameAsyn(mquery);
-
-        return true;
-    }
-
-    public boolean setUseretLatLng(double Lat,double Lng)
-    {
-        search.getFromLocationAsyn(new RegeocodeQuery(
-                new LatLonPoint(Lat, Lng)
-                , 20 // 区域半径
-                , GeocodeSearch.GPS));
-        return true;
-    }
-
-    /**
-     * （待填）
-     * 初始化地图中心点的位置
-     */
-//    public void initLocation() {
-//    }
 
     @Override
     public void onPoiSearched(PoiResult result, int rCode) {
@@ -376,7 +337,6 @@ public class Test4_Hlp_Activity extends BaseActivity implements View.OnClickList
 
         case R.id.search_button:
         if (location.getText().toString() != null && !location.getText().toString().equals("")) {
-//                    search(location.getText().toString());
             searchButton();
         } else
             Toast.makeText(Test4_Hlp_Activity.this, "地址不能为空", Toast.LENGTH_SHORT).show();
