@@ -1,5 +1,6 @@
 package com.example.dell2.androidexamgroup;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -59,7 +60,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 Test1_WHQ_Activity.actionStart(MainActivity.this);//
                 break;
             case R.id.test2:
+                Intent intent = new Intent(MainActivity.this,Test2_WYF_Activity.class);
                 Toast.makeText(MainActivity.this,"test2",Toast.LENGTH_SHORT).show();
+                startActivity(intent);
                 break;
             case R.id.test3:
                 Toast.makeText(MainActivity.this,"test3",Toast.LENGTH_SHORT).show();
